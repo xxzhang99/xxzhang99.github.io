@@ -1,29 +1,22 @@
 [site]
-title = "Jiale Liu"
-description = "PhD student at the University of Example."
+title = "Xinxun Zhang"
+description = "PhD student at Wuhan University."
 favicon = "/favicon.svg"
-last_updated = "November 18, 2025"
+last_updated = "March, 2026"
 
 [author]
-name = "Jiale Liu"
+name = "Xinxun Zhang"
 title = "PhD Student"
-institution = "University of Example"
+institution = "Wuhan University"
 avatar = "/bio.jpg"
 
 [social]
 # Contact information (leave blank or delete to hide)
 
-email = "john.doe@example.com"
-location = "City, Country"
-location_url = "https://maps.google.com"
-location_details = [
-  "Room 123, Science Building,",
-  "University Avenue, City, Country"
-]
-google_scholar = "https://scholar.google.com"
-orcid = "https://orcid.org"
-github = "https://github.com"
-linkedin = "https://linkedin.com"
+email = "xxzhangstu@whu.edu.cn"
+location = "Wuhan, China"
+google_scholar = "https://scholar.google.com/citations?user=VrX_9NkAAAAJ&hl"
+github = "https://github.com/xxzhang99/"
 
 [features]
 # Show a like button on the about page
@@ -33,19 +26,18 @@ enable_likes = true
 enable_one_page_mode = false
 
 [i18n]
-enabled = true
-locales = ["zh", "en"]
+enabled = false
+locales = ["en"]
 default_locale = "en"
 # "auto" means the locale will be determined by the browser's language setting, "fixed" means the locale will be fixed to the default locale (but can be switched still, if you want to disable, set "enable=false")
-mode = "auto"
+mode = "fixed"
 fixed_locale = "en"
 # If true, PRISM will remember user's language preference in browser's localStorage
-persist = true
+persist = false
 # Show a language switcher on the top right corner
-switcher = true
+switcher = false
 
 [i18n.labels]
-zh = "中文"
 en = "English"
 
 [[navigation]]
@@ -59,24 +51,6 @@ title = "Publications"
 type = "page"
 target = "publications"
 href = "/publications"
-
-[[navigation]]
-title = "Teaching"
-type = "page"
-target = "teaching"
-href = "/teaching"
-
-[[navigation]]
-title = "Awards"
-type = "page"
-target = "awards"
-href = "/awards"
-
-[[navigation]]
-title = "Services"
-type = "page"
-target = "services"
-href = "/services"
 
 [[navigation]]
 title = "CV"

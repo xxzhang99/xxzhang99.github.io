@@ -3,9 +3,8 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematical Principles",
-  "Proof of Theorems"
+  "Large Language Models",
+  "Generative Recommendation"
 ]
 
 [[sections]]
@@ -15,6 +14,12 @@ source = "bio.md"
 title = "About"
 
 [[sections]]
+id = "news"
+type = "list"
+title = "News"
+source = "news.toml"
+
+[[sections]]
 id = "featured_publications"
 type = "publications"
 title = "Selected Publications"
@@ -22,8 +27,8 @@ filter = "selected"
 limit = 5
 
 [[sections]]
-id = "news"
-type = "list"
-title = "News"
-source = "news.toml"
+id = "internship"
+type = "internship"
+title = "Internship"
+source = "internship.toml"
 

@@ -1,5 +1,5 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am a PhD student at the School of Computer Science, Wuhan University, advised by [Prof. Jiawei Jiang](https://bluesjjw.github.io/) and [Prof. Xiao Yan](https://hyzheng-code.github.io/XiaoYan.github.io/).
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
+Prior to this, I obtained my Master's degree from Hangzhou Dianzi University in 2025, advised by [Prof. Pengfei Jiao](https://cspjiao.github.io/), and my Bachelor's degree from Zhengzhou University in 2021.
 
-My current research focuses on investigating the mathematical principles of natural philosophy.
+My current research focuses on Large Language Models and Generative Recommendation.

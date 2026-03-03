@@ -1,26 +1,39 @@
 ## Education
 
-**The University of Example**, PhD in Natural Science, *2025 - Present*
-- Research focus: Mathematical Principles of Natural Philosophy
-- Supervisor: Prof. Advisor One and Dr. Advisor Two
+**Wuhan University**, PhD in Computer Science and Technology, *2025.09 - Present*
+- School of Computer Science
+- Advisors: Prof. Jiawei Jiang and Prof. Xiao Yan
 
-**The University of Example**, BSc in Natural Science, *2021 - 2025*
-- Graduated with First Class Honours
+**Hangzhou Dianzi University**, Master in Cyberspace Security, *2022.09 - 2025.06*
+- School of Cyberspace
+- Advisor: Prof. Pengfei Jiao
 
-## Experience
+**Zhengzhou University**, Bachelor in Software Engineering, *2017.09 - 2021.06*
+- School of Software Engineering
 
-**Example Role**
-Company/Institution
-*2023 - 2024*
-- Description of key responsibilities and achievements.
-- Utilized skills to solve problems.
+## Internship Experience
 
-## Skills
+**Tencent**, Research Intern, *2025.11 - 2026.02*
+- Project: Generative Recommendation for Ad
+- Explored end-to-end unified SID generation for generative advertising recommendation.
 
-- **Programming:** Python, C++, MATLAB, LaTeX
-- **Data Analysis:** Pandas, NumPy, SciPy
-- **Languages:** English (Native), French (Fluent)
+**Tencent**, Research Intern, *2026.03 - Now*
+- Project: Generative Recommendation Infra
 
 ## Awards & Honors
 
-- **First Prize in Example Competition** - Committee of Example (*2024*)
+**Master**
+-  2025 Outstanding Master's Graduate of Zhejiang Province
+- First-Class Scholarship; Third-Class Scholarship
+
+**Bachelor**
+- First-Class Scholarship; Third-Class Scholarship
+- Outstanding League Cadre; Outstanding Young Volunteer; Advanced Individual in Social Service
+
+## Services
+
+**Reviewer**
+- IEEE Transactions on Information Forensics and Security (TIFS)
+- IEEE Transactions on Big Data (TBD)
+- KDD 2024
+- AAAI 2025

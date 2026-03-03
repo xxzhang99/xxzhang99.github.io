@@ -24,13 +24,18 @@ export default function News({ items, title }: NewsProps) {
             transition={{ duration: 0.6, delay: 0.5 }}
         >
             <h2 className="text-2xl font-serif font-bold text-primary mb-4">{resolvedTitle}</h2>
-            <div className="space-y-3">
-                {items.map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                        <span className="text-xs text-neutral-500 mt-1 w-16 flex-shrink-0">{item.date}</span>
-                        <p className="text-sm text-neutral-700">{item.content}</p>
-                    </div>
-                ))}
+            <div className="relative">
+                <div className="max-h-32 overflow-y-auto space-y-3 pr-1">
+                    {items.map((item, index) => (
+                        <div key={index} className="flex items-start space-x-3">
+                            <span className="text-xs text-neutral-500 mt-1 w-16 flex-shrink-0">{item.date}</span>
+                            <p className="text-sm text-neutral-700 dark:text-neutral-300">{item.content}</p>
+                        </div>
+                    ))}
+                </div>
+                {items.length > 4 && (
+                    <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent" />
+                )}
             </div>
         </motion.section>
     );

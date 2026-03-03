@@ -169,7 +169,7 @@ function buildNameVariants(name: string): Set<string> {
   return variants;
 }
 
-function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ name: string; isHighlighted?: boolean; isCorresponding?: boolean; isCoAuthor?: boolean }> {
+function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ name: string; isHighlighted?: boolean; isCorresponding?: boolean; isStudentFirstAuthor?: boolean }> {
   if (!authorsStr) return [];
 
   const highlightTextCandidates = new Set<string>();
@@ -190,14 +190,13 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
   return authorsStr
     .split(/\sand\s/)
     .map(author => {
-      // Clean up the author name
       let name = author.trim();
 
-      // Check for corresponding author marker
+      // Check for corresponding author marker (*)
       const isCorresponding = name.includes('*');
 
-      // Check for co-author marker (#)
-      const isCoAuthor = name.includes('#');
+      // Check for student first author marker (#)
+      const isStudentFirstAuthor = name.includes('#');
 
       // Remove special markers from name
       name = name.replace(/[*#]/g, '');
@@ -221,7 +220,7 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
         name,
         isHighlighted,
         isCorresponding,
-        isCoAuthor,
+        isStudentFirstAuthor,
       };
     })
     .filter(author => author.name);
@@ -298,9 +297,9 @@ function reconstructBibTeX(entry: { entryType: string; citationKey: string; entr
     if (!excludeFields.includes(key.toLowerCase())) {
       let cleanValue = value;
 
-      // Clean author field by removing # and * symbols
+      // Clean author field by removing # and * and & symbols
       if (key.toLowerCase() === 'author') {
-        cleanValue = value.replace(/[#*]/g, '');
+        cleanValue = value.replace(/[#*&]/g, '');
       }
 
       bibtex += `  ${key} = {${cleanValue}},\n`;
