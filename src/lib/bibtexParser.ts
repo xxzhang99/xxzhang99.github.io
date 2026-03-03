@@ -43,7 +43,8 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
     const tags = entry.entryTags;
 
     // Parse authors
-    const authors = parseAuthors(tags.author || '', highlightNames);
+    const isStudentFirstAuthor = tags.student_first_author === 'true';
+    const authors = parseAuthors(tags.author || '', highlightNames, isStudentFirstAuthor);
 
     // Parse year and month
     const year = parseInt(tags.year) || new Date().getFullYear();
@@ -90,7 +91,7 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       preview,
 
       // Store original BibTeX (excluding custom fields)
-      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'description', 'keywords', 'code']),
+      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'description', 'keywords', 'code', 'student_first_author']),
     };
 
     // Clean up undefined fields
@@ -169,7 +170,7 @@ function buildNameVariants(name: string): Set<string> {
   return variants;
 }
 
-function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ name: string; isHighlighted?: boolean; isCorresponding?: boolean; isStudentFirstAuthor?: boolean }> {
+function parseAuthors(authorsStr: string, highlightNames: string[], isStudentFirstAuthor = false): Array<{ name: string; isHighlighted?: boolean; isCorresponding?: boolean; isStudentFirstAuthor?: boolean }> {
   if (!authorsStr) return [];
 
   const highlightTextCandidates = new Set<string>();
@@ -186,7 +187,6 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
   const highlightTextList = Array.from(highlightTextCandidates);
   const highlightNormalizedList = Array.from(highlightNormalizedCandidates);
 
-  // Split by "and" and clean up
   return authorsStr
     .split(/\sand\s/)
     .map(author => {
@@ -195,11 +195,8 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
       // Check for corresponding author marker (*)
       const isCorresponding = name.includes('*');
 
-      // Check for student first author marker (#)
-      const isStudentFirstAuthor = name.includes('#');
-
       // Remove special markers from name
-      name = name.replace(/[*#]/g, '');
+      name = name.replace(/[*^]/g, '');
 
       // Handle "Last, First" format
       if (name.includes(',')) {
@@ -220,7 +217,7 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
         name,
         isHighlighted,
         isCorresponding,
-        isStudentFirstAuthor,
+        isStudentFirstAuthor: isHighlighted ? isStudentFirstAuthor : false,
       };
     })
     .filter(author => author.name);
@@ -299,7 +296,7 @@ function reconstructBibTeX(entry: { entryType: string; citationKey: string; entr
 
       // Clean author field by removing # and * and & symbols
       if (key.toLowerCase() === 'author') {
-        cleanValue = value.replace(/[#*&]/g, '');
+        cleanValue = value.replace(/[*^]/g, '');
       }
 
       bibtex += `  ${key} = {${cleanValue}},\n`;
