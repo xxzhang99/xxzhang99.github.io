@@ -23,7 +23,7 @@
 ## Awards & Honors
 
 **Master**
--  2025 Outstanding Master's Graduate of Zhejiang Province
+- 2025 Outstanding Master's Graduate of Zhejiang Province
 - First-Class Scholarship; Third-Class Scholarship
 
 **Bachelor**

@@ -192,6 +192,9 @@ export default function Profile({ author, social, features, researchInterests }:
                                                         </div>
                                                     )}
                                                 </div>
+                                                {social.location && !social.location_details && (
+                                                    <p className="break-words">{social.location}</p>
+                                                )}
                                                 {social.location_details?.map((line, i) => (
                                                     <p key={i} className="break-words">{line}</p>
                                                 ))}

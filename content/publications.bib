@@ -1,9 +1,12 @@
-@article{zhang2026ood,
+@inproceedings{zhang2026ood,
   selected={true},
   title = {Towards OOD Generalization in Dynamic Graphs via Causal Invariant Learning},
   author = {Xinxun Zhang and Pengfei Jiao and Mengzhou Gao and Tianpeng Li and Xuan Guo},
-  journal      = {arXiv preprint arXiv:2603.01626},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year         = {2026},
+  ccf          = {CCF-A},
+  abstract     = {Although dynamic graph neural networks (DyGNNs) have demonstrated promising capabilities, most existing methods ignore out-of-distribution (OOD) shifts that commonly exist in dynamic graphs. Dynamic graph OOD generalization is non-trivial due to the following challenges: 1) Identifying invariant and variant patterns amid complex graph evolution, 2) Capturing the intrinsic evolution rationale from these patterns, and 3) Ensuring model generalization across diverse OOD shifts despite limited data distribution observations. Although several attempts have been made to tackle these challenges, none has successfully addressed all three simultaneously, and they face various limitations in complex OOD scenarios. To solve these issues, we propose a Dynamic graph Causal Invariant Learning (DyCIL) model for OOD generalization via exploiting invariant spatio-temporal patterns from a causal view. Specifically, we first develop a dynamic causal subgraph generator to identify causal dynamic subgraphs explicitly. Next, we design a causal-aware spatio-temporal attention module to extract the intrinsic evolution rationale behind invariant patterns. Finally, we further introduce an adaptive environment generator to capture the underlying dynamics of distributional shifts. Extensive experiments on both real-world and synthetic dynamic graph datasets demonstrate the superiority of our model over state-of-the-art baselines in handling OOD shifts.},
+  url          = {https://arxiv.org/abs/2603.01626},
   code         = {https://github.com/xxzhang99/DyCIL}
 }
 
@@ -15,6 +18,9 @@
   volume={19},
   pages={4272--4284},
   year={2024},
+  ccf={CCF-A},
+  abstract={Change point detection in dynamic networks aims to detect the points of sudden change or abnormal events within the network. It has garnered substantial interest from researchers due to its potential to enhance the stability and reliability of real-world networks. Most change point detection methods are based on statistical characteristics and phased training, and some methods are required to set the percent of change points. Meanwhile, existing methods for change point detection suffer from two limitations. On one hand, they struggle to extract snapshot features that are crucial for accurate change point detection, thereby limiting their overall effectiveness. On the other hand, they are typically tailored for specific network types and lack the versatility to adapt to networks of varying scales. To solve these issues, we propose a novel unified end-to-end framework called Variational Graph Gaussian Mixture model (VGGM) for change point detection in dynamic networks. Specifically, VGGM combines Variational Graph Auto-Encoder (VGAE) and Gaussian Mixture Model (GMM) through joint training, incorporating a Mixture-of-Gaussians prior to model dynamic networks. This approach yields highly effective snapshot embeddings via VGAE and a dedicated readout function, while automating change point detection through GMM. The experimental results, conducted on both real-world and synthetic datasets, clearly demonstrate the superiority of our model in comparison to the current state-of-the-art methods for change point detection.},
+  url={https://ieeexplore.ieee.org/abstract/document/10472540/},
   code={https://github.com/xxzhang99/VGGM}
 }
 
@@ -25,7 +31,10 @@
   booktitle={2024 IEEE International Conference on Data Mining (ICDM)},
   pages={161--170},
   year={2024},
+  ccf={CCF-B},
+  abstract={Generative self-supervised learning (SSL), especially masked autoencoders (MAE), has greatly succeeded and garnered substantial research interest in graph machine learning. However, the research of MAE in dynamic graphs is still scant. This gap is primarily due to the dynamic graph not only possessing topological structure information but also encapsulating temporal evolution dependency. Applying a random masking strategy which most MAE methods adopt to dynamic graphs will remove the crucial subgraph that guides the evolution of dynamic graphs, resulting in the loss of crucial spatio-temporal information in node representations. To bridge this gap, in this paper, we propose a novel Informative Subgraphs Aware Masked Auto-Encoder in Dynamic Graph, namely DyGIS. Specifically, we introduce a constrained probabilistic generative model to generate informative subgraphs that guide the evolution of dynamic graphs, successfully alleviating the issue of missing dynamic evolution subgraphs. The informative subgraph identified by DyGIS will serve as the input of dynamic graph masked autoencoder (DGMAE), effectively ensuring the integrity of the evolutionary spatio-temporal information within dynamic graphs. Extensive experiments on eleven datasets demonstrate that DyGIS achieves state-of-the-art performance across multiple tasks.},
   student_first_author={true},
+  url={https://ieeexplore.ieee.org/abstract/document/10884317/},
   code={https://github.com/xxzhang99/DyGIS}
 }
 
@@ -37,7 +46,10 @@
   volume={36},
   number={10},
   pages={17901-17913},
+  ccf={CCF-B},
+  abstract={Although contrastive self-supervised learning (SSL) on dynamic graphs has made significant success, the issue of heavy reliance on data augmentation and training tricks has been a persistent pain point. Generative SSL, especially masked autoencoders (MAE) has recently produced promising results and can avoid these issues. However, the research on MAE in dynamic graphs remains largely unexplored due to the following challenges: 1) How to design an effective masking strategy for dynamic graphs? 2) How to design a decoder to retain temporal dependency when graphs are perturbed? In this paper, we propose DVGMAE, a novel Dynamic Variational Graph Masked Auto-Encoder model to solve these challenges. DVGMAE simultaneously captures the evolving behaviors and topological features via an innovative masking strategy and an elaborate decoder. Specifically, we first implement a temporal-aware masking strategy on the edges of each snapshot based on the updated probabilities derived from historical mask information. This strategy mitigates potential masking bias in dynamic graphs. We then design a globally enhanced decoder to recover the temporal and spatial information of each snapshot. Extensive experiments demonstrate that DVGMAE outperforms the existing state-of-the-art on various tasks across different datasets.},
   student_first_author={true},
+  url={https://ieeexplore.ieee.org/abstract/document/11061250/},
 }
 
 @article{jiao2024deep,
@@ -47,7 +59,10 @@
   volume={667},
   pages={120499},
   year={2024},
+  ccf={CCF-B},
+  abstract={In dynamic networks, temporal link prediction means that it predicts the appearance or disappearance of links or edges in future snapshots based on the links we have observed. It also plays an essential role in network analysis and analyzing and controlling dynamic networks. However, most studies only focus on supervised temporal link prediction problems, i.e., taking part of the links in the future network as supervised information. The ones that can solve the unsupervised temporal link prediction problem are mainly based on matrix decomposition, which lack the ability to automatically extract nonlinear spatial and temporal features from dynamic networks. The most challenging part of this problem is to extract the inherent evolution of the patterns hidden in dynamic networks in unsupervised ways. Inspired by the application and success of contrastive learning in network representation learning, in this paper, we propose a novel deep Contrastive framework for unsupervised Temporal Link Prediction (CTLP). Our framework is based on a deep encoder-decoder architecture, which can capture the nonlinear structure and temporal features automatically, and can also unsupervised predict future links of subsequent snapshots of dynamic networks. Besides, CTLP could handle the multi-step temporal link prediction problem of dynamic networks through attenuation modeling across the snapshots. Extensive experiments on temporal link prediction show that our CTLP framework significantly outperforms state-of-the-art unsupervised methods, and sometimes even exceeds the performance of supervised ones.},
   student_first_author={true},
+  url={https://www.sciencedirect.com/science/article/pii/S0020025524004122},
   publisher={Elsevier}
 }
 
@@ -55,5 +70,8 @@
   title = {End-to-End Semantic ID Generation for Generative Advertisement Recommendation},
   author = {Jie Jiang* and Xinxun Zhang* and Enming Zhang* and Yuling Xiong* and Jun Zhang and Jingwen Wang and Huan Yu and Yuxiang Wang and Hao Wang and Xiao Yan and Jiawei Jiang},
   journal={arXiv preprint arXiv:2602.10445},
-  year={2026}
+  year={2026},
+  abstract={Generative Recommendation (GR) has excelled by framing recommendation as next-token prediction. This paradigm relies on Semantic IDs (SIDs) to tokenize large-scale items into discrete sequences. Existing GR approaches predominantly generate SIDs via Residual Quantization (RQ), where items are encoded into embeddings and then quantized to discrete SIDs. However, this paradigm suffers from inherent limitations: 1) Objective misalignment and semantic degradation stemming from the two-stage compression; 2) Error accumulation inherent in the structure of RQ. To address these limitations, we propose UniSID, a Unified SID generation framework for generative advertisement recommendation. Specifically, we jointly optimize embeddings and SIDs in an end-to-end manner from raw advertising data, enabling semantic information to flow directly into the SID space and thus addressing the inherent limitations of the two-stage cascading compression paradigm. To capture fine-grained semantics, a multi-granularity contrastive learning strategy is introduced to align distinct items across SID levels. Finally, a summary-based ad reconstruction mechanism is proposed to encourage SIDs to capture high-level semantic information that is not explicitly present in advertising contexts. Experiments demonstrate that UniSID consistently outperforms state-of-the-art SID generation methods, yielding up to a 4.62% improvement in Hit Rate metrics across downstream advertising scenarios compared to the strongest baseline.},
+  url={https://arxiv.org/abs/2602.10445}
 }
+

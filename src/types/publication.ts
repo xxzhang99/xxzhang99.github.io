@@ -43,6 +43,7 @@ export interface Publication {
   selected?: boolean;
   preview?: string;
   summary?: string;
+  ccf?: string;
   researchArea: ResearchArea;
   description?: string;
 }
