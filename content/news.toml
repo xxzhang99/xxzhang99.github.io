@@ -1,6 +1,10 @@
 [[news]]
+date = "2026.02"
+content = "🔬 Released [UniSID](https://arxiv.org/abs/2602.10445): A unified SID generation method for generative ad recommendation."
+
+[[news]]
 date = "2025.11"
-content = "🎉 One paper has been accepted by AAAI 2026."
+content = "🎉 One paper has been accepted at AAAI 2026."
 
 [[news]]
 date = "2025.11"
@@ -20,7 +24,7 @@ content = "🎉 One paper has been accepted by IEEE TNNLS."
 
 [[news]]
 date = "2024.09"
-content = "🎉 One paper has been accepted by IEEE ICDM 2024."
+content = "🎉 One paper has been accepted at IEEE ICDM 2024."
 
 [[news]]
 date = "2024.04"

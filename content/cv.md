@@ -2,11 +2,11 @@
 
 **Wuhan University**, PhD in Computer Science and Technology, *2025.09 - Present*
 - School of Computer Science
-- Advisors: Prof. Jiawei Jiang and Prof. Xiao Yan
+- Advisors: [Prof. Jiawei Jiang](https://bluesjjw.github.io/) and [Prof. Xiao Yan](https://hyzheng-code.github.io/XiaoYan.github.io/)
 
 **Hangzhou Dianzi University**, Master in Cyberspace Security, *2022.09 - 2025.06*
 - School of Cyberspace
-- Advisor: Prof. Pengfei Jiao
+- Advisor: [Prof. Pengfei Jiao](https://cspjiao.github.io/)
 
 **Zhengzhou University**, Bachelor in Software Engineering, *2017.09 - 2021.06*
 - School of Software Engineering
@@ -33,7 +33,7 @@
 ## Services
 
 **Reviewer**
-- IEEE Transactions on Information Forensics and Security (TIFS)
-- IEEE Transactions on Big Data (TBD)
+- IEEE Transactions on Information Forensics and Security
+- IEEE Transactions on Big Data
 - KDD 2024
 - AAAI 2025
